@@ -34,14 +34,19 @@ namespace CarLotSimulator
             };
             lot.Cars.Add(Xterra);
 
-
-
+            var Colorado = new Car("Chevy", "Colorado", 2018, "Amazing", "Best", true);
+            lot.Cars.Add(Colorado);
+            Console.WriteLine($"Number of cars on lot: {CarLot.numberOfCars}\n");
+               
             foreach (var car in lot.Cars)
             {
                 Console.WriteLine($"Year: {car.Year}, Make: {car.Make}, Model: {car.Model}");   
                 car.MakeEngineNoise(car.EngineNoise);
                 car.MakeHonkNoise(car.HonkNoise);
             }
+            
+
+
         }
 
     }
